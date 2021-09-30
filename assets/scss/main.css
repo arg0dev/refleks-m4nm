@@ -1,0 +1,538 @@
+@font-face {
+  font-family: 'Appears';
+  src: url("../fonts/Appears-Regular.woff2") format("woff2"), url("../fonts/Appears-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham TR';
+  src: url("../fonts/Gotham-Black-TR.woff2") format("woff2"), url("../fonts/Gotham-Black-TR.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Light.woff2") format("woff2"), url("../fonts/Gotham-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url("../fonts/Nexa-Book.woff2") format("woff2"), url("../fonts/Nexa-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Appears";
+  background: #000;
+  -webkit-animation: fadeIn 2s linear 1;
+  animation: fadeIn 2s linear 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .viewport-header {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  z-index: 999;
+}
+
+body .viewport-header a {
+  text-decoration: none;
+}
+
+body .viewport-header .title {
+  color: #D6E316;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 99999;
+}
+
+body .viewport-header .title h1 {
+  font-size: 96px;
+}
+
+body .viewport-header .title img {
+  max-width: 50px;
+  height: auto;
+  position: relative;
+  top: -10px;
+}
+
+body .viewport-header .navbar .right {
+  font-family: "Gotham TR";
+}
+
+body .viewport-header .navbar .right .active {
+  color: #D6E316;
+  font-family: "Gotham TR";
+}
+
+body .viewport-header .navbar .right .active:hover {
+  border-bottom: solid 2px transparent;
+}
+
+body .viewport-header .navbar .right a {
+  color: #FFF;
+  font-family: "Gotham";
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .viewport-header .navbar .right a:hover {
+  border-bottom: 2px solid #D6E316;
+}
+
+body .viewport-header .navbar .right .lang a:hover {
+  border-bottom: solid 2px transparent;
+}
+
+body .viewport-header .navbar .right .lang a:nth-child(even)::after {
+  content: "";
+}
+
+body .viewport-header .navbar .right .lang a::after {
+  content: " - ";
+  color: #FFF;
+}
+
+body .viewport-header .slider img {
+  position: relative;
+  padding: 1em;
+}
+
+body .viewport-header .slider .col-xl-6 {
+  border-top: 2px solid #D6E316;
+  padding: 0;
+  max-width: 600px;
+  width: auto;
+  max-height: 500px;
+  height: 100%;
+}
+
+body .viewport-header .slider .col-xl-6 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: 500px;
+}
+
+body .viewport-header .slider .col-xl-6::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 35%;
+  margin-top: -2px;
+  background: #D6E316;
+  z-index: 999;
+}
+
+body .viewport-header .slider .col-xl-6::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 20%;
+  margin-top: -2px;
+  background: #D6E316;
+  z-index: 999;
+}
+
+body .viewport-header .slider .bottom {
+  max-width: 600px;
+  width: 100%;
+}
+
+body .viewport-header .slider .bottom .col-xl-2 {
+  width: 100%;
+  max-width: 200px !important;
+  height: 100% !important;
+}
+
+body .viewport-header .slider .bottom .col-xl-2 img {
+  width: 100%;
+  max-width: 200px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .viewport-header .main .title {
+  position: relative;
+  z-index: initial;
+}
+
+body .viewport-header .main .title h1 {
+  color: #D6E316;
+  font-family: "Gotham TR";
+  font-size: 24px;
+  border-left: solid 1px #D6E316;
+  border-top: solid 1px #D6E316;
+  padding: 1em;
+  width: 125px;
+}
+
+body .viewport-header .main .artist a {
+  font-size: 32px;
+  color: #FFF;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .viewport-header .main .artist a:hover {
+  color: #D6E316;
+}
+
+body .viewport-header .main .artist a:hover::after {
+  color: #FFF;
+}
+
+body .viewport-header .main .artist a:after {
+  content: " / ";
+  color: #FFF;
+}
+
+body .viewport-header .main .about .secOne h1 {
+  font-size: 96px;
+  color: #FFF;
+}
+
+body .viewport-header .main .about .secOne p {
+  color: #FFF;
+  font-family: "Nexa";
+}
+
+body .viewport-header .main .about .secTwo h1 {
+  font-size: 96px;
+  color: #D6E316;
+}
+
+body .viewport-header .main .about .secTwo p {
+  color: #FFF;
+  font-family: "Nexa";
+}
+
+body .viewport-header .bordered h1 {
+  border-bottom: 2px solid #D6E316;
+  max-width: 170px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .75em;
+}
+
+body .viewport-header .bordered h2 {
+  font-family: "Gotham TR";
+  color: #FFF;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+body .viewport-header .bordered h2:hover {
+  color: #D6E316;
+}
+
+body .viewport-header .nav-area .initial img {
+  max-width: 450px !important;
+  width: 100%;
+}
+
+body .viewport-header .nav-area h1 {
+  color: #FFF;
+  font-size: 72px;
+}
+
+body .viewport-header .nav-area .left h1 {
+  color: #FFF;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .viewport-header .nav-area .left h1:hover {
+  color: #D6E316;
+}
+
+body .viewport-header .nav-area .middle img {
+  max-width: 150px;
+  width: 100%;
+}
+
+body .viewport-header .nav-area .middle img:hover {
+  -webkit-animation: upScale 1s infinite;
+  animation: upScale 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes upScale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes upScale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+body .viewport-header .nav-area .right h1 {
+  color: #FFF;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .viewport-header .nav-area .right h1:hover {
+  color: #D6E316;
+}
+
+body .viewport-header .footer p {
+  font-family: "Nexa";
+  color: #3C3C3C;
+}
+
+body .viewport-header .footer .logoArea img {
+  max-width: 60px;
+  width: 100%;
+}
+
+body video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+}
+
+body .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+body .change .bar2 {
+  opacity: 0;
+}
+
+body .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+body .menu {
+  position: relative;
+  z-index: 99999;
+}
+
+body .menu .bar1, body .menu .bar2, body .menu .bar3 {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 30px;
+  height: 1px;
+  background-color: #D6E316;
+  margin: 6px 0;
+}
+
+body .side-active {
+  width: 100% !important;
+}
+
+body .sidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .sidenav a {
+  padding: .50em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF;
+  display: block;
+  font-size: 21px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Gotham";
+  position: relative;
+}
+
+body .sidenav .active {
+  font-family: "Gotham TR";
+  color: #D6E316;
+}
+
+body .sidenav .lang .active {
+  font-family: "Gotham";
+  color: #FFF;
+}
+
+body .sidenav a:hover {
+  color: #f1f1f1;
+}
+
+@media only screen and (max-width: 1200px) {
+  body .viewport-header .title {
+    color: #D6E316;
+    text-transform: uppercase;
+  }
+  body .viewport-header .title h1 {
+    font-size: 56px;
+  }
+  body .viewport-header .main .title h1 {
+    width: 100% !important;
+  }
+  body .viewport-header .main .artist a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .viewport-header .main .artist a::after {
+    content: "";
+  }
+  body .viewport-header .nav-area h1 {
+    color: #FFF;
+    font-size: 42px;
+  }
+  body .viewport-header .nav-area .left h1 {
+    color: #FFF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  body .viewport-header .nav-area .left h1:hover {
+    color: #D6E316;
+  }
+  body .viewport-header .nav-area .middle img {
+    max-width: 100px;
+    width: 100%;
+  }
+  body .viewport-header .nav-area .right h1 {
+    color: #FFF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  body .viewport-header .nav-area .right h1:hover {
+    color: #D6E316;
+  }
+  body .viewport-header .footer p {
+    font-family: "Nexa";
+    color: #3C3C3C;
+  }
+  body .viewport-header .footer .logoArea img {
+    max-width: 50px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body .viewport-header .title {
+    color: #D6E316;
+    text-transform: uppercase;
+  }
+  body .viewport-header .title h1 {
+    font-size: 42px;
+  }
+  body .viewport-header .nav-area h1 {
+    color: #FFF;
+    font-size: 36px;
+  }
+  body .viewport-header .nav-area .left h1 {
+    color: #FFF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  body .viewport-header .nav-area .left h1:hover {
+    color: #D6E316;
+  }
+  body .viewport-header .nav-area .middle img {
+    max-width: 75px;
+    width: 100%;
+  }
+  body .viewport-header .nav-area .right h1 {
+    color: #FFF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  body .viewport-header .nav-area .right h1:hover {
+    color: #D6E316;
+  }
+  body .viewport-header .footer p {
+    font-family: "Nexa";
+    font-size: 12px;
+    color: #3C3C3C;
+  }
+  body .viewport-header .footer .logoArea img {
+    max-width: 35px;
+    width: 100%;
+  }
+  .sidenav {
+    padding-top: 150px !important;
+  }
+  .sidenav a {
+    top: -50px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
