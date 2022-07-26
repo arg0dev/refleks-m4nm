@@ -77,6 +77,39 @@ body {
         user-drag: none;
         user-select: none;
     }
+
+
+    .topbox_close {
+        &::before {
+            content: url(../materials/cancel.svg) !important;
+        }
+
+    }
+
+    .topbox_prev {
+        &:before {
+            content: url(../materials/pop-l.svg) !important;
+        }
+    }
+
+    .topbox_next {
+        &:before {
+            content: url(../materials/pop-r.svg) !important;
+        }
+    }
+
+    .topbox_html5video {
+        margin: auto !important;
+        max-width: auto !important;
+        height: 100% !important;
+    }
+
+
+    .topbox_skin_darkroom .topbox_fill {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
     .viewport-header {
         position: relative;
         height: 100vh;
@@ -123,6 +156,7 @@ body {
                     }
                 }
                 .lang {
+                    display: none;
                     a {
                         &:hover {
                             border-bottom: solid 2px transparent;
@@ -142,20 +176,100 @@ body {
         }
 
         .slider {
+            .out-navigation {
+                position: absolute !important;
+                z-index: -1;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                width: 100% !important;
+                .swipe-l {
+                    position: absolute;
+                    left: 20px;
+                }
+                .swipe-r {
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+            .navigation {
+                position: relative;
+                margin-top: -80px;
+                button {
+                    border-radius: 100%;
+                    border: solid 1px $y;
+                    height: 40px;
+                    width: 40px;
+                    img {
+                        filter: invert(81%) sepia(100%) saturate(385%) hue-rotate(5deg) brightness(98%) contrast(81%);
+                    }
+                }
+                .swipe-r {
+                    background: url(../materials/chevron.svg), #665527c4;
+                    background-size: 20px 20px !important;
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+                .swipe-l {
+                    background: url(../materials/chevron.svg), #665527c4;
+                    background-size: 20px 20px;
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                    transform: rotate(-180deg);
+                }
+            }
             img {
                 position: relative;
                 padding: 1em;
             }
+            .initial {
+                border: initial !important;
+                &::after {
+                    position: initial !important;
+                }
+                &::before {
+                    position: initial !important;
+                }
+            }
+            .right {
+                .col-xl-6 {
+                    h1 {
+                        color: $w;
+                        text-transform: uppercase;
+                        font-size: 90px;
+                        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                    }
+
+
+                    ul {
+                        font-family: $nexa;
+                        list-style-type: none;
+                        text-transform: uppercase;                    
+                        padding-left: 1em;
+                        li {
+                            color: $y;
+                            border-bottom: solid 1px $g;
+                            padding: .75em 0;
+                            span {
+                                color: $w;
+                            }
+                        }
+                    }
+                }
+            }
+
             .col-xl-6 {
                 border-top: 2px solid $y;
                 padding: 0;
-                max-width: 600px;
-                width: auto;
+                max-width: 600px !important;
+                width: auto !important;
                 max-height: 500px;
                 height: 100%;
                 img {
-                    object-fit: cover;
-                    max-width: 100%;
+                    object-fit: cover !important;
+                    max-width: 100% !important;
+                    width: 100% !important;
                     height: 500px;
                 }
                 &::after {
@@ -279,7 +393,7 @@ body {
             }
             h1 {
                 color: $w;
-                font-size: 72px;
+                font-size: 84px;
             }
             .left {
                 h1 {
@@ -436,7 +550,41 @@ body {
 
 @media only screen and (max-width: 1200px) {
     body {
-        .viewport-header {      
+        .viewport-header {  
+            .slider {
+                .out-navigation {
+                    position: relative !important;
+                    height: auto;
+                    display: block !important;
+                    align-items: flex-end;
+                    align-content: flex-end;
+                    width: 100% !important;
+                    margin-top: 50px !important;
+                    z-index: 1 !important;
+                    .swipe-l {
+                        position: absolute;
+                        left: 0px;
+                    }
+                    .swipe-r {
+                        position: absolute;
+                        right: 0px;
+                    }
+                }
+                .col-xl-6 {
+                    max-width: 100% !important;
+                    img {
+                        height: 330px !important;
+                    }
+                }
+            }    
+
+            .right {
+                .col-xl-6 {
+                    h1 {
+                        font-size: 64px !important;
+                    }
+                }
+            }
             .title {
                 color: $y;
                 text-transform: uppercase;
@@ -502,7 +650,7 @@ body {
                 }
                 .logoArea {
                     img {
-                        max-width: 50px;
+                        max-width: 40px;
                         width: 100%;
                     }
                 }
@@ -514,7 +662,14 @@ body {
 
 @media only screen and (max-width: 400px) {
     body {
-        .viewport-header {      
+        .viewport-header {   
+            .slider {
+                .col-xl-6 {
+                    img {
+                        height: 250px !important;
+                    }
+                }
+            }   
             .title {
                 color: $y;
                 text-transform: uppercase;
@@ -564,7 +719,7 @@ body {
                 }
                 .logoArea {
                     img {
-                        max-width: 35px;
+                        max-width: 30px;
                         width: 100%;
                     }
                 }
